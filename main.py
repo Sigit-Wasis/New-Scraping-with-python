@@ -6,7 +6,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-url = "http://lpse.acehbaratkab.go.id/eproc/"
+url = "http://www.sigitwasissubekti13.blogspot.com"
 
 soup = scrapper.get(url)
 
@@ -14,7 +14,7 @@ soup = scrapper.get(url)
 mydb = mysql.connector.connect(
     host = "localhost",
     user = "root",
-    passwd = "123",
+    passwd = "1234567",
     database = "scrape"
 )
 
@@ -53,7 +53,7 @@ if len(href) > 0:
             mydb.commit()
 
 
-        fromaddr = "sigitghoticmetal2001@gmail.com" # email pengirim
+        fromaddr = "sigitghoticmeta2001@gmail.com" # email pengirim
         toaddr = "sigitwasisqodr2018@gmail.com" # email tujuan
         msg = MIMEMultipart()
         msg['From'] = fromaddr
@@ -66,7 +66,7 @@ if len(href) > 0:
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login(fromaddr, "jaringan") # password pengirim
+        server.login(fromaddr, "jajanonekkenek") # password pengirim
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
         server.quit()
